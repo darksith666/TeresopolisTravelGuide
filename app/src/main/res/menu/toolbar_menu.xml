@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- IDs follow the syntax Prefix >> Type >> Description (if applicable)
+      - Prefix: can be anything that would be useful for narrowing down the list of IDs in autocomplete when typing one in XML or code.
+      - Type: e.g. TextView, ImageView, etc. No spaces
+      - Description: describes the element usage e.g. "thumbnail", describing an ImageView
+     There may be some malformed IDs, but hopefully not. -->
+
+<menu xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	tools:context = ".activity.MainActivity">
+
+	<item android:id="@+id/main_menu_about"
+		android:title="@string/menu_about"
+		app:showAsAction="never"/>
+
+</menu>

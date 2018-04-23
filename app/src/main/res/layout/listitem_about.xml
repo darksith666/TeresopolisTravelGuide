@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- IDs follow the syntax Prefix >> Type >> Description (if applicable)
+      - Prefix: can be anything that would be useful for narrowing down the list of IDs in autocomplete when typing one in XML or code.
+      - Type: e.g. TextView, ImageView, etc. No spaces
+      - Description: describes the element usage e.g. "thumbnail", describing an ImageView
+     There may be some malformed IDs, but hopefully not. -->
+
+<android.support.constraint.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:id = "@+id/about_listitem_constraintlayout_layout"
+	android:layout_width = "match_parent"
+	android:layout_height = "@dimen/about_list_item_height"
+	app:layout_constraintEnd_toEndOf = "parent"
+	app:layout_constraintStart_toStartOf = "parent">
+
+	<ImageView
+		android:id = "@+id/about_listitem_imageview_thumbnail"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:scaleType = "centerCrop"
+		android:visibility = "invisible"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintDimensionRatio = "1:1"
+		app:layout_constraintTop_toTopOf = "parent"
+		tools:background = "@color/colorAccent" />
+
+	<ProgressBar
+		android:id = "@+id/about_listitem_progressbar_thumbnail"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:padding = "32dp"
+		android:visibility = "visible"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintDimensionRatio = "1:1"
+		app:layout_constraintTop_toTopOf = "parent"
+		tools:background = "#cc1111" />
+
+	<View
+		android:id = "@+id/about_listitem_view_item_background"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:background = "?android:attr/selectableItemBackground"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toEndOf = "@id/about_listitem_imageview_thumbnail"
+		app:layout_constraintTop_toTopOf = "parent" />
+
+	<TextView
+		android:id = "@+id/about_listitem_textview"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:ellipsize = "end"
+		android:gravity = "center_vertical"
+		android:maxLines = "2"
+		android:paddingEnd = "@dimen/margin_activity"
+		android:paddingStart = "@dimen/margin_list_item_text_start"
+		android:textAppearance = "@style/Base.TextAppearance.AppCompat.Small"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toEndOf = "@id/about_listitem_imageview_thumbnail"
+		app:layout_constraintTop_toTopOf = "parent" />
+
+</android.support.constraint.ConstraintLayout>

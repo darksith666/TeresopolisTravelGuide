@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<string name = "app_name">Teresópolis Travel Guide</string>
+
+	<!--The String and String array IDs follow a general syntax of "type" (prefix) + "name"
+		Each String and String-array is accompanied by a String called "resname"+the String or
+		String-array name.-->
+
+	<string name = "tab_food">Food</string>
+	<string name = "tab_tourism">Tourism</string>
+	<string name = "tab_beer">Beer</string>
+	<string name = "menu_about">About</string>
+
+	<!-- Neighborhood names for use in other strings -->
+
+	<string name = "neighborhood_soberbo" translatable = "false">Soberbo</string>
+	<string name = "neighborhood_alto" translatable = "false">Alto</string>
+	<string name = "neighborhood_agrioes" translatable = "false">Agriões</string>
+	<string name = "neighborhood_bom_retiro" translatable = "false">Bom Retiro</string>
+	<string name = "neighborhood_varzea" translatable = "false">Várzea</string>
+	<string name = "neighborhood_granja" translatable = "false">Granja Comary</string>
+	<string name = "neighborhood_tijuca" translatable = "false">Tijuca</string>
+
+	<!--Attribution
+		Strings for the AboutActivity -->
+
+	<string name = "attribution_developer">Application developed by\nGabriel Feo</string>
+	<string name = "attribution_food_disclaimer">All food photos were taken from either the food\'s own website or its facebook page</string>
+
+	<string name = "resname_attribution_mirante_do_soberbo" translatable = "false">tourism_mirante_do_soberbo</string>
+	<string name = "attribution_tourism_mirante_do_soberbo" translatable = "false">Henry Claussen\n(CC BY-SA 4.0)</string>
+
+	<string name = "resname_attribution_parnaso" translatable = "false">tourism_parnaso</string>
+	<string name = "attribution_tourism_parnaso" translatable = "false">Giovani Livio\n(CC BY-SA 3.0)</string>
+
+	<string name = "resname_attribution_feirinha" translatable = "false">tourism_feirinha</string>
+	<string name = "attribution_tourism_feirinha" translatable = "false">Wilson Dias/ Agência Brasil\n(CC BY 3.0 BR)</string>
+
+	<string name = "resname_attribution_comary" translatable = "false">tourism_comary</string>
+	<string name = "attribution_tourism_comary" translatable = "false">Jorge Antonio de Oliveira Vicente\n(CC BY-SA 3.0)</string>
+
+	<string name = "resname_attribution_fonte_judith" translatable = "false">tourism_fonte_judith</string>
+	<string name = "attribution_tourism_fonte_judith" translatable = "false">Fulviusbsas\n(CC BY-SA 4.0)</string>
+
+	<!--Licenses
+		License names and their URL-->
+	<string-array name = "license_1" translatable = "false">
+		<item>CC BY-SA 4.0</item>
+		<item>https://creativecommons.org/licenses/by-sa/4.0/deed.en</item>
+	</string-array>
+	<string-array name = "license_2" translatable = "false">
+		<item>CC BY-SA 3.0</item>
+		<item>https://creativecommons.org/licenses/by-sa/3.0/deed.en</item>
+	</string-array>
+	<string-array name = "license_3" translatable = "false">
+		<item>CC BY 3.0 BR</item>
+		<item>https://creativecommons.org/licenses/by/3.0/br/deed.pt</item>
+	</string-array>
+
+	<!--Tourism
+	    Strings for TourismFragment-->
+
+	<string name = "resname_tourism_mirante_do_soberbo" translatable = "false">tourism_mirante_do_soberbo</string>
+	<string-array name = "tourism_mirante_do_soberbo">
+		<item>Mirante do Soberbo</item>
+		<item>View of Dedo de Deus</item>
+		<item>@string/neighborhood_soberbo</item>
+	</string-array>
+
+	<string name = "resname_tourism_parnaso" translatable = "false">tourism_parnaso</string>
+	<string-array name = "tourism_parnaso">
+		<item>PARNASO</item>
+		<item>Serra dos Órgãos National Park</item>
+		<item>@string/neighborhood_soberbo</item>
+	</string-array>
+
+	<string name = "resname_tourism_fonte_judith" translatable = "false">tourism_fonte_judith</string>
+	<string-array name = "tourism_fonte_judith">
+		<item>Fonte Judith</item>
+		<item>Historical water fountain</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_tourism_feirinha" translatable = "false">tourism_feirinha</string>
+	<string-array name = "tourism_feirinha">
+		<item>Handicraft Fair of Teresópolis</item>
+		<item>Handcraft items for sale</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_tourism_comary" translatable = "false">tourism_comary</string>
+	<string-array name = "tourism_comary">
+		<item>Granja Comary</item>
+		<item>Nature Park</item>
+		<item>@string/neighborhood_granja</item>
+	</string-array>
+
+	<!--Food
+		Strings for FoodFragment-->
+
+	<string name = "resname_food_dona_irene" translatable = "false">food_dona_irene</string>
+	<string-array name = "food_dona_irene">
+		<item>D. Irene</item>
+		<item>Russian cuisine</item>
+		<item>@string/neighborhood_bom_retiro</item>
+	</string-array>
+
+	<string name = "resname_food_st_gallen" translatable = "false">food_st_gallen</string>
+	<string-array name = "food_st_gallen">
+		<item>Villa St. Gallen</item>
+		<item>Italian and german cuisine</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_food_viva_italia" translatable = "false">food_viva_italia</string>
+	<string-array name = "food_viva_italia">
+		<item>Viva Itália</item>
+		<item>Italian cuisine</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_food_manjericao" translatable = "false">food_manjericao</string>
+	<string-array name = "food_manjericao">
+		<item>Manjericão</item>
+		<item>Pizzeria</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_food_taberna_alpina" translatable = "false">food_taberna_alpina</string>
+	<string-array name = "food_taberna_alpina">
+		<item>Taberna Alpina</item>
+		<item>German cuisine</item>
+		<item>@string/neighborhood_varzea</item>
+	</string-array>
+
+	<string name = "resname_food_recanto_dos_pescadores" translatable = "false">food_recanto_dos_pescadores</string>
+	<string-array name = "food_recanto_dos_pescadores">
+		<item>Recanto dos Pescadores</item>
+		<item>Seafood</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_food_casa_da_picanha" translatable = "false">food_casa_da_picanha</string>
+	<string-array name = "food_casa_da_picanha">
+		<item>Casa da Picanha</item>
+		<item>Meat grilled on stone</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_food_recanto_do_fondue" translatable = "false">food_recanto_do_fondue</string>
+	<string-array name = "food_recanto_do_fondue">
+		<item>Recanto do Fondue</item>
+		<item>Fondue</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_food_recanto_sushi" translatable = "false">food_recanto_sushi</string>
+	<string-array name = "food_recanto_sushi">
+		<item>Recanto Sushi</item>
+		<item>Japanese cuisine</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_food_caldo_de_piranha" translatable = "false">food_caldo_de_piranha</string>
+	<string-array name = "food_caldo_de_piranha">
+		<item>Caldo de Piranha</item>
+		<item>Seafood</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_food_botania" translatable = "false">food_botania</string>
+	<string-array name = "food_botania">
+		<item>Botania</item>
+		<item>Mediterranean and brazilian cuisine</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<!--Beer
+		Strings for the BeerFragment-->
+
+	<string name = "resname_beer_armazem_cervejeiro" translatable = "false">beer_armazem_cervejeiro</string>
+	<string-array name = "beer_armazem_cervejeiro">
+		<item>Armazém Cervejeiro</item>
+		<item>Pilsen, Weiss</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_beer_confraria" translatable = "false">beer_confraria</string>
+	<string-array name = "beer_confraria">
+		<item>Confraria do Chopp</item>
+		<item>Pumpkin ale and more</item>
+		<item>@string/neighborhood_tijuca</item>
+	</string-array>
+
+	<string name = "resname_beer_esquina" translatable = "false">beer_esquina</string>
+	<string-array name = "beer_esquina">
+		<item>Esquina Food Park</item>
+		<item>Various, always changing</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string name = "resname_beer_kanton_bier" translatable = "false">beer_kanton_bier</string>
+	<string-array name = "beer_kanton_bier">
+		<item>Kanton Bier</item>
+		<item>Weiss</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_beer_st_gallen" translatable = "false">beer_st_gallen</string>
+	<string-array name = "beer_st_gallen">
+		<item>Villa St. Gallen</item>
+		<item>Lager, Dunkel and more</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string name = "resname_beer_vagao" translatable = "false">beer_vagao</string>
+	<string-array name = "beer_vagao">
+		<item>Vagão</item>
+		<item>Various</item>
+		<item>@string/neighborhood_varzea</item>
+	</string-array>
+
+	<string name = "resname_beer_villa_85">beer_villa_85</string>
+	<string-array name = "beer_villa_85">
+		<item>Villa 85</item>
+		<item>Red ale, IPA and more</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+</resources>

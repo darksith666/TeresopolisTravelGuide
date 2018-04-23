@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- IDs follow the syntax Prefix >> Type >> Description (if applicable)
+      - Prefix: can be anything that would be useful for narrowing down the list of IDs in autocomplete when typing one in XML or code.
+      - Type: e.g. TextView, ImageView, etc. No spaces
+      - Description: describes the element usage e.g. "thumbnail", describing an ImageView
+     There may be some malformed IDs, but hopefully not. -->
+
+<android.support.constraint.ConstraintLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+	xmlns:app = "http://schemas.android.com/apk/res-auto"
+	xmlns:tools = "http://schemas.android.com/tools"
+	android:id = "@+id/listitem_constraintlayout_layout"
+	android:layout_width = "match_parent"
+	android:layout_height = "@dimen/list_item_height"
+	app:layout_constraintEnd_toEndOf = "parent"
+	app:layout_constraintStart_toStartOf = "parent">
+
+	<ImageView
+		android:id = "@+id/places_listitem_imageview_thumbnail"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:scaleType = "centerCrop"
+		android:visibility = "invisible"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintDimensionRatio = "1:1"
+		app:layout_constraintTop_toTopOf = "parent"
+		tools:background = "@color/colorAccent" />
+
+	<ProgressBar
+		android:id = "@+id/places_listitem_progressbar_thumbnail"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:padding = "32dp"
+		android:visibility = "visible"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintDimensionRatio = "1:1"
+		app:layout_constraintTop_toTopOf = "parent"
+		tools:background = "#cc1111" />
+
+	<View
+		android:id = "@+id/places_listitem_view_item_background"
+		android:layout_width = "0dp"
+		android:layout_height = "0dp"
+		android:background = "?android:attr/selectableItemBackground"
+		app:layout_constraintBottom_toBottomOf = "parent"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toEndOf = "@id/places_listitem_imageview_thumbnail"
+		app:layout_constraintTop_toTopOf = "parent" />
+
+	<TextView
+		android:id = "@+id/places_listitem_textview_title"
+		style = "@style/ListItemChained.Head.Title"
+		app:layout_constraintBottom_toTopOf = "@+id/places_listitem_textview_subtitle"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toEndOf = "@id/places_listitem_imageview_thumbnail"
+		app:layout_constraintVertical_chainStyle = "packed" />
+
+	<TextView
+		android:id = "@+id/places_listitem_textview_subtitle"
+		style = "@style/ListItemChained.Subtitle"
+		app:layout_constraintBottom_toTopOf = "@id/places_listitem_textview_location"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "@id/places_listitem_textview_title"
+		app:layout_constraintTop_toBottomOf = "@+id/places_listitem_textview_title" />
+
+	<TextView
+		android:id = "@+id/places_listitem_textview_location"
+		style = "@style/ListItemChained.Tail.Location"
+		app:layout_constraintEnd_toEndOf = "parent"
+		app:layout_constraintStart_toStartOf = "@id/places_listitem_textview_title"
+		app:layout_constraintTop_toBottomOf = "@+id/places_listitem_textview_subtitle" />
+
+</android.support.constraint.ConstraintLayout>

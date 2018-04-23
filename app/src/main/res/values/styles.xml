@@ -1,0 +1,60 @@
+<resources xmlns:tools = "http://schemas.android.com/tools">
+
+	<!-- Base application theme. -->
+	<style name = "AppTheme" parent = "Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name = "colorPrimary">@color/colorPrimary</item>
+		<item name = "colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name = "colorAccent">@color/colorAccent</item>
+		<item name = "android:textColorPrimary">@android:color/white</item>
+		<item name = "android:textColorSecondary">@android:color/white</item>
+		<item name = "android:textColor">@android:color/black</item>
+	</style>
+
+	<style name = "AppBarTheme">
+		<item name = "android:layout_height">wrap_content</item>
+		<item name = "android:layout_width">match_parent</item>
+		<item name = "android:popupTheme" tools:targetApi = "lollipop">@style/ThemeOverlay.AppCompat.Light</item>
+		<item name = "android:elevation" tools:targetApi = "lollipop">4dp</item>
+	</style>
+
+	<style name = "AppBarTheme.TabLayout">
+		<item name = "tabIndicatorColor">@android:color/white</item>
+	</style>
+
+	<style name = "ListItemChained">
+		<item name = "android:layout_height">wrap_content</item>
+		<item name = "android:layout_width">0dp</item>
+		<item name = "android:layout_marginEnd">16dp</item>
+		<item name = "android:layout_marginBottom">@dimen/spacing_list_item_text_regular</item>
+		<item name = "android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+		<item name = "android:singleLine">true</item>
+		<item name = "android:ellipsize">end</item>
+	</style>
+
+	<style name = "ListItemChained.Head">
+		<item name = "android:layout_marginStart">@dimen/margin_list_item_text_start</item>
+		<item name = "layout_constraintTop_toTopOf">parent</item>
+		<item name = "android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+	</style>
+
+	<style name = "ListItemChained.Tail">
+		<item name = "layout_constraintBottom_toBottomOf">parent</item>
+	</style>
+
+	<style name = "ListItemChained.Head.Title">
+		<item name = "android:layout_marginBottom">@dimen/spacing_list_item_text_title</item>
+		<item name = "android:textStyle">bold</item>
+		<item name = "android:textColor">@android:color/black</item>
+	</style>
+
+	<style name = "ListItemChained.Subtitle">
+		<item name = "android:layout_marginBottom">@dimen/spacing_list_item_text_subtitle</item>
+		<item name = "android:textColor">@android:color/black</item>
+	</style>
+
+	<style name = "ListItemChained.Tail.Location">
+		<item name = "android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+	</style>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android = "http://schemas.android.com/apk/res/android"
+	android:layout_width = "match_parent"
+	android:layout_height = "@dimen/about_list_item_height"
+	android:gravity = "center"
+	android:paddingBottom = "@dimen/margin_activity"
+	android:paddingTop = "@dimen/margin_activity"
+	android:text = "@string/attribution_developer"
+	android:textAppearance = "@style/TextAppearance.AppCompat.Large"
+	android:textStyle = "bold" />

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+	<string name = "app_name">Guia turístico de Teresópolis</string>
+
+	<string name = "tab_food">Comida</string>
+	<string name = "tab_tourism">Turismo</string>
+	<string name = "tab_beer">Cerveja</string>
+	<string name = "menu_about">Sobre</string>
+
+	<!--About
+		Strings for the about activity -->
+
+	<string name = "attribution_developer">Aplicativo desenvolvido por\nGabriel Feo</string>
+	<string name = "attribution_food_disclaimer">Todas as fotografias dos restaurantes foram
+		retiradas do site próprio do restaurante ou de sua página no Facebook.</string>
+
+	<!--Tourism
+		Strings for TourismFragment-->
+
+	<string-array name = "tourism_mirante_do_soberbo">
+		<item>Mirante do Soberbo</item>
+		<item>Vista para o Dedo de Deus</item>
+		<item>@string/neighborhood_soberbo</item>
+	</string-array>
+
+	<string-array name = "tourism_parnaso">
+		<item>PARNASO</item>
+		<item>Parque Nacional da Serra dos Órgãos</item>
+		<item>@string/neighborhood_soberbo</item>
+	</string-array>
+
+	<string-array name = "tourism_fonte_judith">
+		<item>Fonte Judith</item>
+		<item>Histórica fonte de água mineral</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "tourism_feirinha">
+		<item>Feirinha de Teresópolis</item>
+		<item>Feira de artesanato</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "tourism_comary">
+		<item>Granja Comary</item>
+		<item>Parque natural</item>
+		<item>@string/neighborhood_granja</item>
+	</string-array>
+
+	<!--Food
+		Strings for FoodFragment-->
+
+	<string-array name = "food_dona_irene">
+		<item>D. Irene</item>
+		<item>Culinária Russa</item>
+		<item>@string/neighborhood_bom_retiro</item>
+	</string-array>
+
+	<string-array name = "food_st_gallen">
+		<item>Villa St. Gallen</item>
+		<item>Culinária alemã e italiana</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "food_viva_italia">
+		<item>Viva Itália</item>
+		<item>Culinária italiana</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "food_manjericao">
+		<item>Manjericão</item>
+		<item>Pizzaria</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "food_taberna_alpina">
+		<item>Taberna Alpina</item>
+		<item>Culinária alemã</item>
+		<item>@string/neighborhood_varzea</item>
+	</string-array>
+
+	<string-array name = "food_recanto_dos_pescadores">
+		<item>Recanto dos Pescadores</item>
+		<item>Frutos do mar</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "food_casa_da_picanha">
+		<item>Casa da Picanha</item>
+		<item>Churrasco na pedra</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "food_recanto_do_fondue">
+		<item>Recanto do Fondue</item>
+		<item>Rodízio de fondue</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "food_recanto_sushi">
+		<item>Recanto Sushi</item>
+		<item>Culinária japonesa</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "food_caldo_de_piranha">
+		<item>Caldo de Piranha</item>
+		<item>Frutos do mar</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "food_botania">
+		<item>Botania</item>
+		<item>Culinária mediterrânea e brasileira</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<!--Beer
+		Strings for the BeerFragment-->
+
+	<string-array name = "beer_armazem_cervejeiro">
+		<item>Armazém Cervejeiro</item>
+		<item>Pilsen, Weiss</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "beer_confraria">
+		<item>Confraria do Chopp</item>
+		<item>Pumpkin ale e mais</item>
+		<item>@string/neighborhood_tijuca</item>
+	</string-array>
+
+	<string-array name = "beer_esquina">
+		<item>Esquina Food Park</item>
+		<item>Diversas, uma diferente a cada semana</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+	<string-array name = "beer_kanton_bier">
+		<item>Kanton Bier</item>
+		<item>Weiss</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "beer_st_gallen">
+		<item>Villa St. Gallen</item>
+		<item>Lager, Dunkel e mais</item>
+		<item>@string/neighborhood_alto</item>
+	</string-array>
+
+	<string-array name = "beer_vagao">
+		<item>Vagão</item>
+		<item>Diversas</item>
+		<item>@string/neighborhood_varzea</item>
+	</string-array>
+
+	<string-array name = "beer_villa_85">
+		<item>Villa 85</item>
+		<item>Red ale, IPA e mais</item>
+		<item>@string/neighborhood_agrioes</item>
+	</string-array>
+
+</resources>
