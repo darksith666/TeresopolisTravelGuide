@@ -12,10 +12,9 @@ Project #6 for the Udacity Android Basics nanodegree.
   * each place is linked to Google Maps for easy navigation and more details.
 
 ### Screenshots
-![Tourism tab]
-![Food tab]
-![Beer tab]
-
-[Tourism tab]: 
-[Food tab]: 
-[Beer tab]: 
+<p>
+<img src="/screenshots/tourism_tab.jpg" height="400" width="240"/>
+<img src="/screenshots/food_tab.jpg" height="400" width="240"/>
+<img src="/screenshots/beer_tab.jpg" height="400" width="240"/>
+<img src="/screenshots/about_screen.jpg" height="400" width="240"/>
+</p>
