@@ -24,10 +24,6 @@ public class MainActivity extends AppCompatActivity {
 	 *
 	 * @see SimpleFragmentPagerAdapter
 	 */
-	/*
-	 * REVIEWER: I read the JavaDoc how-to document and it states a Doc comment "must precede
-	 * a class, field, constructor or method declaration". However, the onCreate method seems very
-	 * commonplace to me, do I have to write a Doc comment for it at all? */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
 	 *
 	 * @return true - so that the menu will be displayed
 	 */
-	/* REVIEWER: The JavaDoc how-to document and, as I understand it, a link to the overridden
-	* method will be automatically included in the documentation. However, I don't know when I
-	* should write specific @return and @param tags myself, especially because I don't understand
-	* certain parameters such as the "menu" in onCreateOptionsMenu. In this case, for example,
-	* was it necessary to write the @return tag or would the inherited doc be sufficient? */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		getMenuInflater().inflate(R.menu.toolbar_menu, menu);
