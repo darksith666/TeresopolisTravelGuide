@@ -58,9 +58,9 @@ class PlaceAdapter extends ArrayAdapter<Place> {
 		final PlaceViewHolder viewHolder;
 		if (convertView == null) {
 			convertView = LayoutInflater.from(mContext).inflate(R.layout.listitem_places,
-			                                                     parent,
-			                                                     false
-			                                                    );
+			                                                    parent,
+			                                                    false
+			                                                   );
 			viewHolder = new PlaceViewHolder();
 			viewHolder.constraintLayout = convertView
 					.findViewById(R.id.listitem_constraintlayout_layout);
