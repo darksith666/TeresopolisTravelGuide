@@ -4,7 +4,6 @@ import android.content.Context;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -14,6 +13,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+import static org.powermock.api.mockito.PowerMockito.mockStatic;
+import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(ResourceMethods.class)
@@ -32,7 +33,7 @@ public class PlaceTest {
 	public void shouldCreatePlaceObject() {
 		/*--/ Given /--*/
 		Context context = mock(Context.class);
-		PowerMockito.mockStatic(ResourceMethods.class);
+		mockStatic(ResourceMethods.class);
 		when(ResourceMethods.getResourceIdFromName(context, resourceName, "drawable"))
 				.thenReturn(expectedResourceId);
 		when(ResourceMethods.getStringArrayFromResourceName(context, resourceName))
@@ -47,9 +48,9 @@ public class PlaceTest {
 		assertNotNull(place);
 		assertThat(place, isA(Place.class));
 		// Verify mocked static methods
-		PowerMockito.verifyStatic(ResourceMethods.class);
+		verifyStatic(ResourceMethods.class);
 		ResourceMethods.getResourceIdFromName(context, resourceName, "drawable");
-		PowerMockito.verifyStatic(ResourceMethods.class);
+		verifyStatic(ResourceMethods.class);
 		ResourceMethods.getStringArrayFromResourceName(context, resourceName);
 		// Verify actual methods
 		assertThat(place.getTitle(), equalTo(expectedPlaceInfo[0]));
