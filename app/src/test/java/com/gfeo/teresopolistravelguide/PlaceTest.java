@@ -12,17 +12,16 @@ import static org.hamcrest.CoreMatchers.isA;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
-import static org.powermock.api.mockito.PowerMockito.verifyStatic;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(ResourceMethods.class)
 public class PlaceTest {
 
 	private Place place;
-	private String[] expectedPlaceInfo = {"Empire State", "A building", "New York"};
-	private String resourceName = "EmpireState";
+	private String resourceName = "empire";
+	private String expectedTitle = "Empire State";
+	private String expectedSubtitle = "A building";
+	private String expectedLocation = "New York";
 	private int expectedResourceId = 12345;
 
 	/**
@@ -33,29 +32,20 @@ public class PlaceTest {
 	public void shouldCreatePlaceObject() {
 		/*--/ Given /--*/
 		Context context = mock(Context.class);
-		mockStatic(ResourceMethods.class);
-		when(ResourceMethods.getResourceIdFromName(context, resourceName, "drawable"))
-				.thenReturn(expectedResourceId);
-		when(ResourceMethods.getStringArrayFromResourceName(context, resourceName))
-				.thenReturn(expectedPlaceInfo);
+		ResourceMethodsMock resourceMethodsMock =
+				new ResourceMethodsMock(null, expectedResourceId,
+				                        expectedTitle, expectedSubtitle, expectedLocation);
 
 		/*--/ When /--*/
-		// A new place object
 		place = new Place(context, resourceName);
 
 		/*--/ Then /--*/
-		// Verify constructors
 		assertNotNull(place);
 		assertThat(place, isA(Place.class));
-		// Verify mocked static methods
-		verifyStatic(ResourceMethods.class);
-		ResourceMethods.getResourceIdFromName(context, resourceName, "drawable");
-		verifyStatic(ResourceMethods.class);
-		ResourceMethods.getStringArrayFromResourceName(context, resourceName);
-		// Verify actual methods
-		assertThat(place.getTitle(), equalTo(expectedPlaceInfo[0]));
-		assertThat(place.getSubtitle(), equalTo(expectedPlaceInfo[1]));
-		assertThat(place.getLocation(), equalTo(expectedPlaceInfo[2]));
+		resourceMethodsMock.verify(false, true, true);
+		assertThat(place.getTitle(), equalTo(expectedTitle));
+		assertThat(place.getSubtitle(), equalTo(expectedSubtitle));
+		assertThat(place.getLocation(), equalTo(expectedLocation));
 		assertThat(place.getThumbnailResourceId(), equalTo(expectedResourceId));
 	}
 }
