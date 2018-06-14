@@ -22,7 +22,7 @@ public class AttributionTest {
 	 * accessor methods.
 	 */
 	@Test
-	public void shouldCreateAttributionObject() {
+	public void createAttributionObject() {
 		/*--/ Given /--*/
 		// These values:
 		String resourceName = "geddes";

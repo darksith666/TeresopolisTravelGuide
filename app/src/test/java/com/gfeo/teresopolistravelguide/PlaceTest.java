@@ -22,7 +22,7 @@ public class PlaceTest {
 	 * methods.
 	 */
 	@Test
-	public void shouldCreatePlaceObject() {
+	public void createPlaceObject() {
 		/*--/ Given /--*/
 		// These values:
 		String resourceName = "empire";
