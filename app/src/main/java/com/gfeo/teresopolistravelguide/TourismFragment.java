@@ -33,13 +33,17 @@ public class TourismFragment extends PlacesFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		View view = super.onCreateView(inflater, container, savedInstanceState);
+		fillArrayList();
+		setupListView(view, placeArrayList);
+		return view;
+	}
+
+	private void fillArrayList() {
 		addToArrayList(getString(R.string.resname_tourism_mirante_do_soberbo));
 		addToArrayList(getString(R.string.resname_tourism_parnaso));
 		addToArrayList(getString(R.string.resname_tourism_feirinha));
 		addToArrayList(getString(R.string.resname_tourism_comary));
 		addToArrayList(getString(R.string.resname_tourism_fonte_judith));
-		setupListView(view, placeArrayList);
-		return view;
 	}
 
 }

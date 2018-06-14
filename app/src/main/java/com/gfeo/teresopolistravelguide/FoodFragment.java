@@ -33,6 +33,12 @@ public class FoodFragment extends PlacesFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		View view = super.onCreateView(inflater, container, savedInstanceState);
+		fillArrayList();
+		setupListView(view, placeArrayList);
+		return view;
+	}
+
+	private void fillArrayList() {
 		addToArrayList(getString(R.string.resname_food_dona_irene));
 		addToArrayList(getString(R.string.resname_food_taberna_alpina));
 		addToArrayList(getString(R.string.resname_food_st_gallen));
@@ -44,7 +50,5 @@ public class FoodFragment extends PlacesFragment {
 		addToArrayList(getString(R.string.resname_food_recanto_do_fondue));
 		addToArrayList(getString(R.string.resname_food_recanto_sushi));
 		addToArrayList(getString(R.string.resname_food_botania));
-		setupListView(view, placeArrayList);
-		return view;
 	}
 }

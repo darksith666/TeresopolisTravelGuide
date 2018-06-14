@@ -33,6 +33,12 @@ public class BeerFragment extends PlacesFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	                         Bundle savedInstanceState) {
 		View view = super.onCreateView(inflater, container, savedInstanceState);
+		fillArrayList();
+		setupListView(view, placeArrayList);
+		return view;
+	}
+
+	private void fillArrayList() {
 		addToArrayList(getString(R.string.resname_beer_villa_85));
 		addToArrayList(getString(R.string.resname_beer_st_gallen));
 		addToArrayList(getString(R.string.resname_beer_kanton_bier));
@@ -40,8 +46,6 @@ public class BeerFragment extends PlacesFragment {
 		addToArrayList(getString(R.string.resname_beer_confraria));
 		addToArrayList(getString(R.string.resname_beer_vagao));
 		addToArrayList(getString(R.string.resname_beer_armazem_cervejeiro));
-		setupListView(view, placeArrayList);
-		return view;
 	}
 
 }
