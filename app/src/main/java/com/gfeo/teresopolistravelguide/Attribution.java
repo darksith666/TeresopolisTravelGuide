@@ -41,6 +41,10 @@ class Attribution {
 		mAuthorName = ResourceMethods.getStringFromResourceName(context,
 		                                                        attributionResourceName
 		                                                       );
+		mLicenseUri = checkForLicenseUri(context);
+	}
+
+	private Uri checkForLicenseUri(Context context) {
 		for (int i = 0; true; i++) {
 			String licenseResourceName = "license_" + i;
 			String[] licenseStringArray = ResourceMethods
@@ -48,8 +52,7 @@ class Attribution {
 					                                licenseResourceName
 					                               );
 			if (licenseStringArray != null && mAuthorName.contains(licenseStringArray[0])) {
-				mLicenseUri = Uri.parse(licenseStringArray[1]);
-				return;
+				return Uri.parse(licenseStringArray[1]);
 			}
 		}
 	}
