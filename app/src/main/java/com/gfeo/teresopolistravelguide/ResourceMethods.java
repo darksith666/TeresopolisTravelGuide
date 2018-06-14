@@ -13,6 +13,21 @@ import android.content.Context;
 class ResourceMethods {
 
 	/**
+	 * Gets the desired String according to the given name, using the
+	 * {@link ResourceMethods#getResourceIdFromName(Context, String, String)} method.
+	 *
+	 * @param context      A {@code Context} to provide the
+	 *                     {@link ResourceMethods#getResourceIdFromName(Context, String, String)}
+	 *                     method's basic functionality
+	 * @param resourceName The name of the String resource whose content will be returned
+	 * @return the String contained in the resource of the given name
+	 */
+	static String getStringFromResourceName(Context context, String resourceName) {
+		int stringResourceId = getResourceIdFromName(context, resourceName, "string");
+		return context.getString(stringResourceId);
+	}
+
+	/**
 	 * Gets the desired resource according to the given name and type, using similar methods from
 	 * {@link Context}, though simplifying their usage.
 	 *
@@ -30,21 +45,6 @@ class ResourceMethods {
 		                                            resourceType,
 		                                            context.getPackageName()
 		                                           );
-	}
-
-	/**
-	 * Gets the desired String according to the given name, using the
-	 * {@link ResourceMethods#getResourceIdFromName(Context, String, String)} method.
-	 *
-	 * @param context      A {@code Context} to provide the
-	 *                     {@link ResourceMethods#getResourceIdFromName(Context, String, String)}
-	 *                     method's basic functionality
-	 * @param resourceName The name of the String resource whose content will be returned
-	 * @return the String contained in the resource of the given name
-	 */
-	static String getStringFromResourceName(Context context, String resourceName) {
-		int stringResourceId = getResourceIdFromName(context, resourceName, "string");
-		return context.getString(stringResourceId);
 	}
 
 	/**

@@ -1,7 +1,7 @@
 package com.gfeo.teresopolistravelguide;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ListView;
@@ -35,9 +35,6 @@ public class AboutActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_about);
 
 		setSupportActionBar((Toolbar) findViewById(R.id.about_toolbar));
-		/*REVIEWER: Why does Lint warn me of a potential java.lang.NullPointerException being
-		* thrown by this method and not warn me of one by the similar method in the
-		* MainActivity? */
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 		addToAttributionArrayList(getString(R.string.resname_attribution_mirante_do_soberbo));
