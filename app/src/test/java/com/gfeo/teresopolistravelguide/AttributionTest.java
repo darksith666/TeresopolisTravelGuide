@@ -17,12 +17,6 @@ import static org.mockito.Mockito.mock;
 @PrepareForTest(ResourceMethods.class)
 public class AttributionTest {
 
-	private String resourceName = "geddes";
-	private String licenseName = "(CC BY 3.0 BR)";
-	private String expectedAuthor = "Anne Geddes\n" + licenseName;
-	private String expectedLicenseUri = "https://creativecommons.org/licenses/by-sa/3.0/deed.en";
-	private int expectedImageResourceId = 12345;
-
 	/**
 	 * Tests an Attribution object creation by verifying the behavior of its constructor and
 	 * accessor methods.
@@ -30,6 +24,13 @@ public class AttributionTest {
 	@Test
 	public void shouldCreateAttributionObject() {
 		/*--/ Given /--*/
+		// These values:
+		String resourceName = "geddes";
+		String licenseName = "(CC BY 3.0 BR)";
+		String expectedAuthor = "Anne Geddes\n" + licenseName;
+		String expectedLicenseUri = "https://creativecommons.org/licenses/by-sa/3.0/deed.en";
+		int expectedImageResourceId = 12345;
+		// These mocks:
 		Context context = mock(Context.class);
 		ResourceMethodsMock resourceMethodsMock =
 				new ResourceMethodsMock(expectedAuthor, expectedImageResourceId,

@@ -17,13 +17,6 @@ import static org.mockito.Mockito.mock;
 @PrepareForTest(ResourceMethods.class)
 public class PlaceTest {
 
-	private Place place;
-	private String resourceName = "empire";
-	private String expectedTitle = "Empire State";
-	private String expectedSubtitle = "A building";
-	private String expectedLocation = "New York";
-	private int expectedResourceId = 12345;
-
 	/**
 	 * Tests a Place object creation by verifying the behavior of its constructor and accessor
 	 * methods.
@@ -31,13 +24,20 @@ public class PlaceTest {
 	@Test
 	public void shouldCreatePlaceObject() {
 		/*--/ Given /--*/
+		// These values:
+		String resourceName = "empire";
+		String expectedTitle = "Empire State";
+		String expectedSubtitle = "A building";
+		String expectedLocation = "New York";
+		int expectedResourceId = 12345;
+		// These Mocks:
 		Context context = mock(Context.class);
 		ResourceMethodsMock resourceMethodsMock =
 				new ResourceMethodsMock(null, expectedResourceId,
 				                        expectedTitle, expectedSubtitle, expectedLocation);
 
 		/*--/ When /--*/
-		place = new Place(context, resourceName);
+		Place place = new Place(context, resourceName);
 
 		/*--/ Then /--*/
 		assertNotNull(place);
