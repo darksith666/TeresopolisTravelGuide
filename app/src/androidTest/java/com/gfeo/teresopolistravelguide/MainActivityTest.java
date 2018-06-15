@@ -29,14 +29,17 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.isSelected;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static com.gfeo.teresopolistravelguide.UiTestUtils.getFromUi;
 import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.anything;
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertNotNull;
 
+/**
+ * A test suite for the {@link MainActivity}.
+ *
+ * @author gabrielfeo
+ */
 @RunWith(AndroidJUnit4.class)
-public class MainActivityTest {
+public class MainActivityTest extends UiTest {
 
 	@Rule
 	public IntentsTestRule<MainActivity> intentsTestRule =
@@ -49,10 +52,10 @@ public class MainActivityTest {
 	@Test
 	public void clickOnAPlace() {
 		/*--/ Given /--*/
-		assertActivity();
-		checkIfFragmentIsDisplayed();
+		assertActivity(intentsTestRule);
+		checkIfViewIsDisplayed(R.id.root_view_places_fragment);
 		int placePosition = 0;
-		ListView listView = getFromUi(intentsTestRule, R.id.places_listview);
+		ListView listView = getViewFromUi(intentsTestRule, R.id.places_listview);
 		Place place = (Place) listView.getAdapter().getItem(placePosition);
 		Uri expectedUri = Uri.parse("geo:0,0?q=" + place.getTitle() + ", " + place.getLocation()
 				                            + ", Teresópolis");
@@ -71,15 +74,14 @@ public class MainActivityTest {
 	/**
 	 * Tests swiping between sections in {@code MainActivity}. Basically, the test cycles the
 	 * {@link #swipeToSection(boolean, TabLayout, int)} method according to the number of tabs
-	 * available. This test
-	 * swipes between all tabs, forward and back.
+	 * available. This test swipes between all tabs, forward and back.
 	 *
 	 * @see PlacesFragment
 	 * @see SimpleFragmentPagerAdapter
 	 */
 	@Test
 	public void swipeBetweenSections() {
-		TabLayout tabLayout = getFromUi(intentsTestRule, R.id.main_tablayout);
+		TabLayout tabLayout = getViewFromUi(intentsTestRule, R.id.main_tablayout);
 		int tabCount = tabLayout.getTabCount();
 		int startTab = tabLayout.getSelectedTabPosition();
 
@@ -100,7 +102,7 @@ public class MainActivityTest {
 	@Test
 	public void openAboutScreen() {
 		/*--/ Given /--*/
-		assertActivity();
+		assertActivity(intentsTestRule);
 
 		/*--/ When /--*/
 		openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
@@ -110,21 +112,25 @@ public class MainActivityTest {
 		Intents.intended(hasComponent(AboutActivity.class.getName()));
 	}
 
-	private void assertActivity() { assertNotNull(intentsTestRule.getActivity()); }
-
-	private void checkIfFragmentIsDisplayed() {
-		onView(allOf(withId(R.id.root_view_places_fragment),
-		             hasFocus()))
-				.check(matches(isDisplayed()));
-	}
-
+	/**
+	 * Tests swiping between Views in a {@link android.support.v4.view.ViewPager} with a
+	 * {@link TabLayout}. Can swipe either to the next tab or to the previous tab.
+	 *
+	 * @param toPreviousSection determines the swipe direction.
+	 * @param tabLayout         the {@code TabLayout} to be tested. This is used to assert the
+	 *                          result, by getting the expected tab's title.
+	 * @param currentPosition   the current tab's position in the {@code TabLayout}, used to
+	 *                          determine the target tab.
+	 */
 	private void swipeToSection(boolean toPreviousSection,
-	                            TabLayout tabLayout, int currentPosition) {
+	                            TabLayout tabLayout,
+	                            int currentPosition) {
+
 		int destinationSection = (toPreviousSection) ? currentPosition - 1
 		                                             : currentPosition + 1;
 
 		/*--/ Given /--*/
-		assertActivity();
+		assertActivity(intentsTestRule);
 		onView(withId(R.id.main_viewpager)).check(matches(isDisplayed()));
 		String destinationTabTitle = tabLayout.getTabAt(destinationSection).getText().toString();
 
