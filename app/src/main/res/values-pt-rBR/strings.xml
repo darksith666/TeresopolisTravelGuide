@@ -4,10 +4,10 @@
 
 	<string name = "app_name">Guia turístico de Teresópolis</string>
 
-	<string name = "tab_food">Comida</string>
-	<string name = "tab_tourism">Turismo</string>
-	<string name = "tab_beer">Cerveja</string>
-	<string name = "menu_about">Sobre</string>
+	<string name = "main_tab_food">Comida</string>
+	<string name = "main_tab_tourism">Turismo</string>
+	<string name = "main_tab_beer">Cerveja</string>
+	<string name = "main_menu_about">Sobre</string>
 
 	<!--About
 		Strings for the about activity -->

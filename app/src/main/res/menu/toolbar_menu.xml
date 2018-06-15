@@ -12,7 +12,7 @@
 	tools:context = ".activity.MainActivity">
 
 	<item android:id="@+id/main_menu_about"
-		android:title="@string/menu_about"
+		android:title = "@string/main_menu_about"
 		app:showAsAction="never"/>
 
 </menu>

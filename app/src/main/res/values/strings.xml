@@ -8,10 +8,10 @@
 		Each String and String-array is accompanied by a String called "resname"+the String or
 		String-array name.-->
 
-	<string name = "tab_food">Food</string>
-	<string name = "tab_tourism">Tourism</string>
-	<string name = "tab_beer">Beer</string>
-	<string name = "menu_about">About</string>
+	<string name = "main_tab_food">Food</string>
+	<string name = "main_tab_tourism">Tourism</string>
+	<string name = "main_tab_beer">Beer</string>
+	<string name = "main_menu_about">About</string>
 
 	<!-- Neighborhood names for use in other strings -->
 

@@ -47,13 +47,13 @@ class SimpleFragmentPagerAdapter extends FragmentPagerAdapter {
 		String pageTitle = null;
 		switch (position) {
 			case 0:
-				pageTitle = mContext.getString(R.string.tab_tourism);
+				pageTitle = mContext.getString(R.string.main_tab_tourism);
 				break;
 			case 1:
-				pageTitle = mContext.getString(R.string.tab_food);
+				pageTitle = mContext.getString(R.string.main_tab_food);
 				break;
 			case 2:
-				pageTitle = mContext.getString(R.string.tab_beer);
+				pageTitle = mContext.getString(R.string.main_tab_beer);
 				break;
 		}
 		return pageTitle;
