@@ -50,7 +50,7 @@ public class MainActivityTest extends UiTest {
 	 * an intent to Google Maps with a search query.
 	 */
 	@Test
-	public void clickOnAPlace() {
+	public void clickOnPlace() {
 		/*--/ Given /--*/
 		assertActivity(intentsTestRule);
 		checkIfViewIsDisplayed(R.id.root_view_places_fragment);
@@ -66,9 +66,9 @@ public class MainActivityTest extends UiTest {
 		                  .perform(click());
 
 		/*--/ Then /--*/
-		hasAction(Intent.ACTION_VIEW);
 		Intents.intended(allOf(hasData(equalTo(expectedUri)),
 		                       hasAction(Intent.ACTION_VIEW)));
+		Intents.assertNoUnverifiedIntents();
 	}
 
 	/**
@@ -110,6 +110,7 @@ public class MainActivityTest extends UiTest {
 
 		/*--/ Then /--*/
 		Intents.intended(hasComponent(AboutActivity.class.getName()));
+		Intents.assertNoUnverifiedIntents();
 	}
 
 	/**
