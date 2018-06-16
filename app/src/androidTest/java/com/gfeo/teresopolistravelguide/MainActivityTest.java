@@ -47,7 +47,7 @@ public class MainActivityTest extends UiTest {
 			new IntentsTestRule<>(MainActivity.class);
 
 	/**
-	 * Tests clicking on a place in the {@code MainActivity} ListView. Clicking one should send
+	 * Tests clicking on a place in the {@link MainActivity} ListView. Clicking one should send
 	 * an intent to Google Maps with a search query.
 	 */
 	@Test
