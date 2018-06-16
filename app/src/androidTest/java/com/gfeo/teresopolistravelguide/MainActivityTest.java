@@ -32,6 +32,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.allOf;
 import static org.hamcrest.CoreMatchers.anything;
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.junit.Assert.assertNotNull;
 
 /**
  * A test suite for the {@link MainActivity}.
@@ -52,8 +53,9 @@ public class MainActivityTest extends UiTest {
 	@Test
 	public void clickOnPlace() {
 		/*--/ Given /--*/
-		assertActivity(intentsTestRule);
-		checkIfViewIsDisplayed(R.id.root_view_places_fragment);
+		assertNotNull(intentsTestRule.getActivity());
+		onView(allOf(withId(R.id.root_view_places_fragment), hasFocus()))
+				.check(matches(isDisplayed()));
 		int placePosition = 0;
 		ListView listView = getViewFromUi(intentsTestRule, R.id.places_listview);
 		Place place = (Place) listView.getAdapter().getItem(placePosition);
@@ -102,7 +104,7 @@ public class MainActivityTest extends UiTest {
 	@Test
 	public void openAboutScreen() {
 		/*--/ Given /--*/
-		assertActivity(intentsTestRule);
+		assertNotNull(intentsTestRule.getActivity());
 
 		/*--/ When /--*/
 		openActionBarOverflowOrOptionsMenu(InstrumentationRegistry.getTargetContext());
@@ -131,7 +133,7 @@ public class MainActivityTest extends UiTest {
 		                                             : currentPosition + 1;
 
 		/*--/ Given /--*/
-		assertActivity(intentsTestRule);
+		assertNotNull(intentsTestRule.getActivity());
 		onView(withId(R.id.main_viewpager)).check(matches(isDisplayed()));
 		String destinationTabTitle = tabLayout.getTabAt(destinationSection).getText().toString();
 
