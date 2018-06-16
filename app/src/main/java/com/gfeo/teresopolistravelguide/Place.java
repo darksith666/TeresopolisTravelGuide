@@ -21,23 +21,23 @@ class Place {
 
 	/**
 	 * Retrieves the resource ID of the thumbnail image ({@link Place#mThumbnailResourceId}) and
-	 * the string array holding information about the Place using the {@link ResourceMethods}.
+	 * the string array holding information about the Place using the {@link ResourceUtils}.
 	 * Then, each item of the String array is assigned to a specific variable; namely,
 	 * {@link Place#mTitle}, {@link Place#mSubtitle} and {@link Place#mLocation}.
 	 *
 	 * @param context      Provides a {@link Context} for the object, used as an argument for
-	 *                     {@code ResourceMethods}
+	 *                     {@code ResourceUtils}
 	 * @param resourceName The name of the resource, for fetching the actual resource with {@code
-	 *                     ResourceMethods}
+	 *                     ResourceUtils}
 	 */
 	Place(Context context, String resourceName) {
-		mThumbnailResourceId = ResourceMethods.getResourceIdFromName(context,
-		                                                             resourceName,
-		                                                             "drawable"
-		                                                            );
-		String[] stringArray = ResourceMethods.getStringArrayFromResourceName(context,
-		                                                                      resourceName
-		                                                                     );
+		mThumbnailResourceId = ResourceUtils.getResourceIdFromName(context,
+		                                                           resourceName,
+		                                                           "drawable"
+		                                                          );
+		String[] stringArray = ResourceUtils.getStringArrayFromResourceName(context,
+		                                                                    resourceName
+		                                                                   );
 		mTitle = stringArray[0];
 		mSubtitle = stringArray[1];
 		mLocation = stringArray[2];

@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest(ResourceMethods.class)
+@PrepareForTest(ResourceUtils.class)
 public class AttributionTest {
 
 	/**
@@ -32,8 +32,8 @@ public class AttributionTest {
 		int expectedImageResourceId = 12345;
 		// These mocks:
 		Context context = mock(Context.class);
-		ResourceMethodsMock resourceMethodsMock =
-				new ResourceMethodsMock(expectedAuthor, expectedImageResourceId,
+		ResourceUtilsMock resourceUtilsMock =
+				new ResourceUtilsMock(expectedAuthor, expectedImageResourceId,
 				                        licenseName, expectedLicenseUri);
 
 		/*--/ When /--*/
@@ -42,7 +42,7 @@ public class AttributionTest {
 		/*--/ Then /--*/
 		assertNotNull(attribution);
 		assertThat(attribution, isA(Attribution.class));
-		resourceMethodsMock.verify(true, true, true);
+		resourceUtilsMock.verify(true, true, true);
 		assertThat(attribution.getAuthorName(), equalTo(expectedAuthor));
 		assertThat(attribution.getLicenseUri(), equalTo(expectedLicenseUri));
 		assertThat(attribution.getImageResourceId(), equalTo(expectedImageResourceId));

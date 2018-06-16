@@ -6,17 +6,17 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
-public class ResourceMethodsMock {
+public class ResourceUtilsMock {
 
-	public ResourceMethodsMock(String expectedString,
+	public ResourceUtilsMock(String expectedString,
 	                           int expectedResourceId,
 	                           String... expectedStringArray) {
-		mockStatic(ResourceMethods.class);
-		when(ResourceMethods.getStringFromResourceName(any(), any()))
+		mockStatic(ResourceUtils.class);
+		when(ResourceUtils.getStringFromResourceName(any(), any()))
 				.thenReturn(expectedString);
-		when(ResourceMethods.getResourceIdFromName(any(), any(), any()))
+		when(ResourceUtils.getResourceIdFromName(any(), any(), any()))
 				.thenReturn(expectedResourceId);
-		when(ResourceMethods.getStringArrayFromResourceName(any(), any()))
+		when(ResourceUtils.getStringArrayFromResourceName(any(), any()))
 				.thenReturn(expectedStringArray);
 	}
 
@@ -24,16 +24,16 @@ public class ResourceMethodsMock {
 	                   boolean getResourceIdMethod,
 	                   boolean getStringArrayMethod) {
 		if (getStringMethod) {
-			PowerMockito.verifyStatic(ResourceMethods.class);
-			ResourceMethods.getStringFromResourceName(any(), any());
+			PowerMockito.verifyStatic(ResourceUtils.class);
+			ResourceUtils.getStringFromResourceName(any(), any());
 		}
 		if (getResourceIdMethod) {
-			PowerMockito.verifyStatic(ResourceMethods.class);
-			ResourceMethods.getResourceIdFromName(any(), any(), any());
+			PowerMockito.verifyStatic(ResourceUtils.class);
+			ResourceUtils.getResourceIdFromName(any(), any(), any());
 		}
 		if (getStringArrayMethod) {
-			PowerMockito.verifyStatic(ResourceMethods.class);
-			ResourceMethods.getStringArrayFromResourceName(any(), any());
+			PowerMockito.verifyStatic(ResourceUtils.class);
+			ResourceUtils.getStringArrayFromResourceName(any(), any());
 		}
 	}
 }

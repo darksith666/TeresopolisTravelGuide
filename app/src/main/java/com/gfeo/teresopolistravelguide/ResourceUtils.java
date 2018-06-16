@@ -10,14 +10,14 @@ import android.content.Context;
  * @author gabrielfeo
  */
 
-class ResourceMethods {
+class ResourceUtils {
 
 	/**
 	 * Gets the desired String according to the given name, using the
-	 * {@link ResourceMethods#getResourceIdFromName(Context, String, String)} method.
+	 * {@link ResourceUtils#getResourceIdFromName(Context, String, String)} method.
 	 *
 	 * @param context      A {@code Context} to provide the
-	 *                     {@link ResourceMethods#getResourceIdFromName(Context, String, String)}
+	 *                     {@link ResourceUtils#getResourceIdFromName(Context, String, String)}
 	 *                     method's basic functionality
 	 * @param resourceName The name of the String resource whose content will be returned
 	 * @return the String contained in the resource of the given name
@@ -49,10 +49,10 @@ class ResourceMethods {
 
 	/**
 	 * Gets the desired String array according to the given name, using the
-	 * {@link ResourceMethods#getResourceIdFromName(Context, String, String)} method.
+	 * {@link ResourceUtils#getResourceIdFromName(Context, String, String)} method.
 	 *
 	 * @param context      A {@code Context} to provide the
-	 *                     {@link ResourceMethods#getResourceIdFromName(Context, String, String)}
+	 *                     {@link ResourceUtils#getResourceIdFromName(Context, String, String)}
 	 *                     method's basic functionality
 	 * @param resourceName The name of the String array resource whose content will be returned
 	 * @return the String array contained in the resource of the given name

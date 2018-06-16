@@ -14,7 +14,7 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 
 @RunWith(PowerMockRunner.class)
-@PrepareForTest(ResourceMethods.class)
+@PrepareForTest(ResourceUtils.class)
 public class PlaceTest {
 
 	/**
@@ -32,8 +32,8 @@ public class PlaceTest {
 		int expectedResourceId = 12345;
 		// These Mocks:
 		Context context = mock(Context.class);
-		ResourceMethodsMock resourceMethodsMock =
-				new ResourceMethodsMock(null, expectedResourceId,
+		ResourceUtilsMock resourceUtilsMock =
+				new ResourceUtilsMock(null, expectedResourceId,
 				                        expectedTitle, expectedSubtitle, expectedLocation);
 
 		/*--/ When /--*/
@@ -42,7 +42,7 @@ public class PlaceTest {
 		/*--/ Then /--*/
 		assertNotNull(place);
 		assertThat(place, isA(Place.class));
-		resourceMethodsMock.verify(false, true, true);
+		resourceUtilsMock.verify(false, true, true);
 		assertThat(place.getTitle(), equalTo(expectedTitle));
 		assertThat(place.getSubtitle(), equalTo(expectedSubtitle));
 		assertThat(place.getLocation(), equalTo(expectedLocation));

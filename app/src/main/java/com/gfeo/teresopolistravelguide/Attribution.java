@@ -23,31 +23,31 @@ class Attribution {
 
 	/**
 	 * Assigns the {@link Attribution#mAuthorName} and {@link Attribution#mImageResourceId}
-	 * according to the arguments provided, using the {@link ResourceMethods}. Then, checks the
+	 * according to the arguments provided, using the {@link ResourceUtils}. Then, checks the
 	 * {@code mAuthorName} String for a possible license name and parses its respective URL to a
 	 * Uri, assigned to {@link Attribution#mLicenseUri}.
 	 *
 	 * @param context      Provides a {@link Context} for the object, used as an argument for
-	 *                     {@link ResourceMethods}
+	 *                     {@link ResourceUtils}
 	 * @param resourceName The name of the resource, for fetching the actual resource with {@code
-	 *                     ResourceMethods}
+	 *                     ResourceUtils}
 	 */
 	Attribution(Context context, String resourceName) {
-		mImageResourceId = ResourceMethods.getResourceIdFromName(context,
-		                                                         resourceName,
-		                                                         "drawable"
-		                                                        );
+		mImageResourceId = ResourceUtils.getResourceIdFromName(context,
+		                                                       resourceName,
+		                                                       "drawable"
+		                                                      );
 		String attributionResourceName = "attribution_" + resourceName;
-		mAuthorName = ResourceMethods.getStringFromResourceName(context,
-		                                                        attributionResourceName
-		                                                       );
+		mAuthorName = ResourceUtils.getStringFromResourceName(context,
+		                                                      attributionResourceName
+		                                                     );
 		mLicenseUri = checkForLicenseUri(context);
 	}
 
 	private Uri checkForLicenseUri(Context context) {
 		for (int i = 0; true; i++) {
 			String licenseResourceName = "license_" + i;
-			String[] licenseStringArray = ResourceMethods
+			String[] licenseStringArray = ResourceUtils
 					.getStringArrayFromResourceName(context,
 					                                licenseResourceName
 					                               );
